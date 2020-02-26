@@ -11,6 +11,8 @@ requests = "*"
 flask = "*"
 pymongo = "*"
 beautifulsoup4 = "*"
+notebook = "*"
+pandas = "*"
 
 [requires]
 python_version = "3.7"
