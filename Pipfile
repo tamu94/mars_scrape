@@ -13,6 +13,7 @@ pymongo = "*"
 beautifulsoup4 = "*"
 notebook = "*"
 pandas = "*"
+bleach = "*"
 
 [requires]
 python_version = "3.7"
