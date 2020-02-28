@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "70edd9b471e406b0b75702ab8518a44ca83a3ab4f6d8578de094ce196e6383e6"
+            "sha256": "8ba41c2a30a439320546878b4dba1c2c9201867f43255f3c5dc6e8cd37ed57fd"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -44,6 +44,7 @@
                 "sha256:44f69771e2ac81ff30d929d485b7f9919f3ad6d019b6b20c74f3b8687c3f70df",
                 "sha256:aa8b870d0f46965bac2c073a93444636b0e1ca74e9777e34f03dd494b8a59d48"
             ],
+            "index": "pypi",
             "version": "==3.1.1"
         },
         "certifi": {
@@ -310,10 +311,10 @@
         },
         "parso": {
             "hashes": [
-                "sha256:56b2105a80e9c4df49de85e125feb6be69f49920e121406f15e7acde6c9dfc57",
-                "sha256:951af01f61e6dccd04159042a0706a31ad437864ec6e25d0d7a96a9fbb9b0095"
+                "sha256:0c5659e0c6eba20636f99a04f469798dca8da279645ce5c387315b2c23912157",
+                "sha256:8515fc12cfca6ee3aa59138741fc5624d62340c97e401c74875769948d4f2995"
             ],
-            "version": "==0.6.1"
+            "version": "==0.6.2"
         },
         "pickleshare": {
             "hashes": [
