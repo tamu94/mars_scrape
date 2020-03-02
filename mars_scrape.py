@@ -61,7 +61,8 @@ def scrape():
     mars_data["news_title"] = titles[0]
 
     # Bonus return the short paragrapgh text "description"
-    mars_data["description"] = extract_values(mars_news_json, "description")
+    descriptions = extract_values(mars_news_json, "description")
+    mars_data["paragrapgh"] = descriptions[0]
 
     # Get URL for Featured JPL Mars IMage
     mars_image_text = response(jpl_images_url).text
