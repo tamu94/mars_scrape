@@ -75,7 +75,10 @@ def scrape():
     img_url = footer_tag["data-fancybox-href"]
     featured_image_url = jpl_base + img_url
     mars_data["featured_image"] = featured_image_url
-
+    # Get the image title
+    featured_image_title = footer_tag['data-title']
+    mars_data["featured_image_title"] = featured_image_title
+    
     # get the latest Mars weather from twitter
     mars_twitter_text = response(mars_weather_url).text
 
