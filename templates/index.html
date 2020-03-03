@@ -49,22 +49,19 @@
     
 
 
-
-        <div class = "row" id="mars_hemispheres">
-            <div class = "col-md-12">
-                <h3><center>Mars Hemispheres</center></h3>
-
-                {% for hemisphere_images in mars_info.hemisphere_images %}
-                <div class="col-md-6">
-                    <div class ="thumbnail">
-                        <img src ="{{hemisphere_images.img_url}}">
+        <div class = "container">
+            <h2><center>Mars Hemispheres</center></h2>
+                <div class = "row">
+           
+                    {% for hemisphere_images in mars_info.hemisphere_images %}
+                    <div class="col">
+                        
+                        <img src ="{{hemisphere_images.img_url}}" height="500" width="500">
                         <h4>{{hemisphere_images.title}}</h4>
+                        
                     </div>
+                    {% endfor %}
                 </div>
-                {% endfor %}
-
-            </div>
-
         </div>
 
     </div>
