@@ -15,6 +15,7 @@ mars_weather_url = "https://twitter.com/marswxreport?lang=en"
 mars_facts_url = "http://space-facts.com/mars/"
 usgs_images_url = "https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars"
 
+
 def scrape():
 
     mars_data = {}
@@ -62,7 +63,7 @@ def scrape():
 
     # Bonus return the short paragrapgh text "description"
     descriptions = extract_values(mars_news_json, "description")
-    mars_data["paragrapgh"] = descriptions[0]
+    mars_data["paragraph"] = descriptions[0]
 
     # Get URL for Featured JPL Mars IMage
     mars_image_text = response(jpl_images_url).text
@@ -85,12 +86,13 @@ def scrape():
     # get mars facts from space-facts.com using pandas
 
     dfs = pd.read_html(mars_facts_url, header=None)[0].rename(
-        columns={0: "description", 1: "value"}
+        columns={0: "Description", 1: "Value"}
     )
 
     # Convert string to dataframe
     mars_facts_df = pd.DataFrame(dfs)
-    mars_facts_table_html = mars_facts_df.to_html()
+    mars_facts_df = mars_facts_df.set_index("Description")
+    mars_facts_table_html = mars_facts_df.to_html(index=True, header=True)
     mars_data["mars_facts_table"] = mars_facts_table_html
 
     # Get mars hemisphere images from usgs
@@ -132,6 +134,6 @@ def scrape():
         {"title": titles[i], "img_url": img_url[i]} for i in range(len(img_url))
     ]
 
-    mars_data["hemispere_images"] = hemisphere_images
+    mars_data["hemisphere_images"] = hemisphere_images
 
     return mars_data
