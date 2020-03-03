@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="stylesheet.css">
     </head>	
 <body>
-    <div class = "container">
+    <div class = "container-fluid">
 
         
         <div class = "jumbotron text-center">
@@ -26,7 +26,7 @@
             </div>
         </div>
     
-        <div class = "container">
+        <div class = "container-fluid">
         <div class = "row">
             <div class ="img-fluid" alt="Responsive image">
                 <h4>Featured Image</h4>
@@ -49,14 +49,14 @@
     
 
 
-        <div class = "container">
+        <div class = "container-fluid">
             <h2><center>Mars Hemispheres</center></h2>
                 <div class = "row">
            
                     {% for hemisphere_images in mars_info.hemisphere_images %}
                     <div class="col">
                         
-                        <img src ="{{hemisphere_images.img_url}}" height="500" width="500">
+                        <img src ="{{hemisphere_images.img_url}}" height="600" width="600">
                         <h4>{{hemisphere_images.title}}</h4>
                         
                     </div>
