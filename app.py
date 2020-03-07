@@ -14,7 +14,7 @@ collection = db.mars_data
 @app.route("/scrape")
 def scrape():
     mars = mars_scrape.scrape()
-    collection.update({}, mars, upsert=True)
+    collection.replace_one({}, mars, upsert=True)
     return redirect("http://localhost:5000/", code=302)
 
 
